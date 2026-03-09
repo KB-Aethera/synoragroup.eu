@@ -1,0 +1,503 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synora Group — ATLAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+–bg:       #f8f7f4;
+–ink:      #0d0d0c;
+–mid:      #5a5750;
+–faint:    #c8c4bc;
+–accent:   #102240;
+–green:    #2d6a4a;
+–rule:     #dedad4;
+–mono:     ‘IBM Plex Mono’, monospace;
+–serif:    ‘IBM Plex Serif’, Georgia, serif;
+}
+
+html { font-size: 17px; }
+
+body {
+background: var(–bg);
+color: var(–ink);
+font-family: var(–serif);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+opacity: 0;
+animation: appear 0.9s ease forwards 0.05s;
+}
+
+@keyframes appear {
+from { opacity: 0; transform: translateY(5px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.topbar {
+border-bottom: 2px solid var(–accent);
+padding: 0.75rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+}
+
+.topbar-left {
+font-family: var(–mono);
+font-size: 0.62rem;
+font-weight: 500;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: var(–accent);
+}
+
+.topbar-right {
+font-family: var(–mono);
+font-size: 0.58rem;
+letter-spacing: 0.1em;
+color: var(–mid);
+text-transform: uppercase;
+}
+
+main {
+flex: 1;
+max-width: 720px;
+margin: 0 auto;
+padding: 4.5rem 2rem 4rem;
+width: 100%;
+}
+
+.status-line {
+display: flex;
+align-items: center;
+gap: 0.65rem;
+margin-bottom: 3rem;
+}
+
+.dot {
+width: 6px; height: 6px;
+border-radius: 50%;
+background: var(–green);
+flex-shrink: 0;
+animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+0%, 100% { opacity: 1; }
+50%       { opacity: 0.3; }
+}
+
+.status-text {
+font-family: var(–mono);
+font-size: 0.6rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(–mid);
+}
+
+.hero-label {
+font-family: var(–mono);
+font-size: 0.58rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–mid);
+margin-bottom: 0.8rem;
+}
+
+h1 {
+font-family: var(–serif);
+font-size: 2.3rem;
+font-weight: 300;
+line-height: 1.22;
+color: var(–ink);
+letter-spacing: -0.01em;
+margin-bottom: 0.5rem;
+}
+
+h1 em {
+font-style: italic;
+color: var(–accent);
+font-weight: 300;
+}
+
+.hero-subtitle {
+font-family: var(–mono);
+font-size: 0.65rem;
+letter-spacing: 0.08em;
+color: var(–mid);
+text-transform: uppercase;
+margin-bottom: 2.5rem;
+padding-bottom: 2.5rem;
+border-bottom: 1px solid var(–rule);
+}
+
+.body {
+font-size: 1rem;
+line-height: 1.75;
+color: #1e1e1c;
+margin-bottom: 1.4rem;
+font-weight: 300;
+}
+
+.body strong {
+font-weight: 400;
+color: var(–ink);
+}
+
+.domain-strip {
+margin: 2.2rem 0;
+border-top: 1px solid var(–rule);
+border-bottom: 1px solid var(–rule);
+padding: 1.1rem 0;
+}
+
+.domain-label {
+font-family: var(–mono);
+font-size: 0.56rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–mid);
+margin-bottom: 0.7rem;
+}
+
+.domain-list {
+font-family: var(–mono);
+font-size: 0.65rem;
+color: var(–accent);
+line-height: 1.9;
+letter-spacing: 0.03em;
+columns: 2;
+column-gap: 2rem;
+}
+
+.domain-list span { display: block; }
+.domain-list span::before { content: ’— ’; color: var(–faint); }
+
+.theorem-block {
+margin: 2.2rem 0;
+border-left: 2px solid var(–accent);
+padding: 1.1rem 1.4rem;
+background: rgba(16,34,64,0.03);
+}
+
+.theorem-tag {
+font-family: var(–mono);
+font-size: 0.56rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.55rem;
+font-weight: 500;
+}
+
+.theorem-text {
+font-family: var(–serif);
+font-size: 0.92rem;
+line-height: 1.65;
+color: var(–ink);
+font-style: italic;
+font-weight: 300;
+}
+
+.theorem-text strong {
+font-style: normal;
+font-weight: 400;
+}
+
+.eq-strip {
+background: var(–accent);
+padding: 0.8rem 1.3rem;
+margin: 2.2rem 0;
+overflow: hidden;
+position: relative;
+}
+
+.eq-strip::after {
+content: ‘’;
+position: absolute;
+right: 0; top: 0; bottom: 0;
+width: 3rem;
+background: linear-gradient(to right, transparent, var(–accent));
+}
+
+.eq-inner {
+font-family: var(–mono);
+font-size: 0.6rem;
+color: rgba(248,247,244,0.65);
+white-space: nowrap;
+letter-spacing: 0.05em;
+}
+
+.eq-inner span { color: rgba(248,247,244,0.9); }
+
+.impl-block {
+margin: 2.2rem 0;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0;
+border: 1px solid var(–rule);
+}
+
+.impl-cell {
+padding: 0.95rem 1.1rem;
+border-bottom: 1px solid var(–rule);
+border-right: 1px solid var(–rule);
+opacity: 0;
+animation: fadein 0.5s ease forwards;
+}
+
+.impl-cell:nth-child(even)      { border-right: none; }
+.impl-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+.impl-cell:nth-child(1) { animation-delay: 0.5s; }
+.impl-cell:nth-child(2) { animation-delay: 0.65s; }
+.impl-cell:nth-child(3) { animation-delay: 0.8s; }
+.impl-cell:nth-child(4) { animation-delay: 0.95s; }
+.impl-cell:nth-child(5) { animation-delay: 1.1s; }
+.impl-cell:nth-child(6) { animation-delay: 1.25s; }
+
+@keyframes fadein {
+from { opacity: 0; transform: translateY(3px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+
+.impl-id {
+font-family: var(–mono);
+font-size: 0.55rem;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: var(–mid);
+margin-bottom: 0.3rem;
+}
+
+.impl-desc {
+font-family: var(–serif);
+font-size: 0.85rem;
+line-height: 1.45;
+color: var(–ink);
+font-weight: 300;
+}
+
+hr {
+border: none;
+border-top: 1px solid var(–rule);
+margin: 2.5rem 0;
+}
+
+.contact-label {
+font-family: var(–mono);
+font-size: 0.56rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–mid);
+margin-bottom: 0.7rem;
+}
+
+.contact-email {
+font-family: var(–mono);
+font-size: 0.9rem;
+color: var(–accent);
+text-decoration: none;
+border-bottom: 1px solid var(–faint);
+padding-bottom: 1px;
+transition: border-color 0.2s;
+letter-spacing: 0.02em;
+}
+
+.contact-email:hover { border-color: var(–accent); }
+
+.contact-note {
+margin-top: 0.65rem;
+font-family: var(–serif);
+font-size: 0.82rem;
+color: var(–mid);
+line-height: 1.55;
+font-style: italic;
+font-weight: 300;
+}
+
+footer {
+border-top: 1px solid var(–rule);
+padding: 1.2rem 2rem;
+max-width: 720px;
+margin: 0 auto;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.footer-l, .footer-r {
+font-family: var(–mono);
+font-size: 0.55rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–faint);
+}
+
+@media (max-width: 540px) {
+main { padding: 3rem 1.3rem; }
+h1 { font-size: 1.75rem; }
+.impl-block { grid-template-columns: 1fr; }
+.impl-cell { border-right: none; }
+.impl-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(–rule); }
+.impl-cell:last-child { border-bottom: none; }
+.domain-list { columns: 1; }
+footer { flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+.topbar { flex-direction: column; gap: 0.3rem; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-left">Synora Group &nbsp;·&nbsp; Independent Research</span>
+  <span class="topbar-right">synoragroup.eu &nbsp;·&nbsp; Est. 2026</span>
+</div>
+
+<main>
+
+  <div class="status-line">
+    <div class="dot"></div>
+    <span class="status-text">Active research &nbsp;·&nbsp; Preprint in preparation &nbsp;·&nbsp; Implementation under continuous development</span>
+  </div>
+
+  <p class="hero-label">Framework</p>
+
+  <h1>ATLAS: <em>A Geometric Field Theory<br>of Continuous Autonomous Intelligence</em></h1>
+
+  <p class="hero-subtitle">
+    Scientific Hypothesis &nbsp;·&nbsp; Architectural Theorem &nbsp;·&nbsp; Production Implementation
+  </p>
+
+  <p class="body">
+    The dominant paradigm in artificial intelligence — gradient descent over fixed architectures —
+    has three structural failure modes: <strong>approximation without geometry</strong>,
+    <strong>pattern without causality</strong>, and <strong>inference without time</strong>.
+    ATLAS is a formal response to all three simultaneously, grounded in a single architectural principle:
+    intelligence is a physical process characterised by a Riemannian geometry that encodes causal history,
+    a perception mechanism that maps signal trajectories into that geometry,
+    and an action mechanism that minimises expected free energy under a self-generated model.
+  </p>
+
+  <p class="body">
+    This is not a better approximation system. It is a categorically different architecture —
+    one that perceives through the complete geometric invariant of signal trajectories,
+    represents the world through a self-organising Riemannian manifold whose metric tensors
+    evolve continuously from experience, and acts without external reward.
+    The framework is domain-agnostic by construction: the same theorems,
+    the same canonical equations, the same production implementation apply identically
+    whether the signals originate from an equity order book, a drone's inertial unit,
+    or a planetary rover's spectrometer array.
+  </p>
+
+  <div class="domain-strip">
+    <p class="domain-label">Mathematical Foundations — Eight Unified Domains</p>
+    <div class="domain-list">
+      <span>Rough path theory &amp; path signatures</span>
+      <span>Tropical algebra &amp; min-plus semiring</span>
+      <span>Riemannian information geometry</span>
+      <span>Spectral graph theory</span>
+      <span>Self-exciting point processes</span>
+      <span>Self-organised criticality</span>
+      <span>Variational free energy &amp; active inference</span>
+      <span>Field calculus &amp; aggregate computation</span>
+    </div>
+  </div>
+
+  <div class="theorem-block">
+    <p class="theorem-tag">Theorem A1 &nbsp;·&nbsp; The Autonomy Theorem &nbsp;·&nbsp; Pending external review</p>
+    <p class="theorem-text">
+      Under hypotheses of V-geometric ergodicity and oracle-freedom,
+      an ATLAS agent converges to the regime-optimal policy at rate
+      <strong>O(τ<sub>mix</sub> · log 1/ε)</strong>,
+      with all six constants explicitly computable from observable path data.
+      Computationally verified. The first proved extension theorem of the framework.
+    </p>
+  </div>
+
+  <div class="eq-strip">
+    <p class="eq-inner">
+      <span>I1</span>: V-geometric ergodicity &nbsp;·&nbsp;
+      <span>E100</span>: BCH Hall log-signature &nbsp;·&nbsp;
+      <span>E200</span>: exact discrete OU &nbsp;·&nbsp;
+      <span>E300</span>: natural gradient GNG &nbsp;·&nbsp;
+      <span>E600</span>: K-step EFE lookahead &nbsp;·&nbsp;
+      <span>G3-k</span>: metastable regime partition &nbsp;·&nbsp;
+      <span>C-family</span>: causal DAG recovery &nbsp;·&nbsp;
+      <span>R-family</span>: Q32.32 perturbation bounds
+    </p>
+  </div>
+
+  <p class="body">
+    The framework has a reference implementation in production Rust —
+    deterministic Q32.32 fixed-point arithmetic throughout,
+    sub-microsecond decision cycles on institutional-grade hardware,
+    streaming BCH Hall log-signatures computed over a 30-dimensional Hall basis,
+    online Hawkes infectivity estimation via recursive maximum likelihood,
+    and a self-evolving kernel architecture with zero heap allocation in the hot path.
+    Theory and implementation are developed against a single canonical specification.
+    <strong>The theoretical objects are computable, not merely formally stated.</strong>
+  </p>
+
+  <div class="impl-block">
+    <div class="impl-cell">
+      <p class="impl-id">Sealed Spine</p>
+      <p class="impl-desc">V-geometric ergodicity, projection operators, minorization, Q32.32 invariants</p>
+    </div>
+    <div class="impl-cell">
+      <p class="impl-id">Module A</p>
+      <p class="impl-desc">Oracle-free regime convergence — proved, constants derived, computationally verified</p>
+    </div>
+    <div class="impl-cell">
+      <p class="impl-id">G-family</p>
+      <p class="impl-desc">Geometric regime detection with spectral gap guarantees and GNG convergence</p>
+    </div>
+    <div class="impl-cell">
+      <p class="impl-id">R-family</p>
+      <p class="impl-desc">Quantization robustness — invariant-law perturbation bounds under Q32.32</p>
+    </div>
+    <div class="impl-cell">
+      <p class="impl-id">C-family</p>
+      <p class="impl-desc">Causal DAG recovery — consistency and convergence rate under causal rates model</p>
+    </div>
+    <div class="impl-cell">
+      <p class="impl-id">M-family</p>
+      <p class="impl-desc">Metacognitive closure — self-knowledge index and second-order perception</p>
+    </div>
+  </div>
+
+  <p class="body">
+    The framework generates five falsifiable predictions with explicit falsification criteria:
+    power-law prediction error decay consistent with self-organised criticality,
+    causal skeleton recovery convergence from online infectivity estimation,
+    somatic stability under exact Ornstein-Uhlenbeck dynamics,
+    causal DAG recovery at rate O(n<sup>−1/2</sup>),
+    and swarm coherence emerging from mutual perception alone —
+    without communication protocol, coordinator, or explicit state sharing.
+    These are not design goals. They are necessary consequences of the theory.
+  </p>
+
+  <hr>
+
+  <p class="contact-label">Contact</p>
+  <a class="contact-email" href="mailto:k.petrov@synoragroup.eu">k.petrov@synoragroup.eu</a>
+  <p class="contact-note">
+    Enquiries regarding the ATLAS framework, research collaboration,
+    peer review, and certification methodology are welcome.
+  </p>
+
+</main>
+
+<footer>
+  <span class="footer-l">Synora Group &nbsp;·&nbsp; Sofia &nbsp;·&nbsp; 2026</span>
+  <span class="footer-r">synoragroup.eu</span>
+</footer>
+
+</body>
+</html>
