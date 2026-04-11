@@ -14,9 +14,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NOUS — A New Class of Autonomous Intelligence Systems — Synora Group</title>
-  <meta name="description" content="NOUS: the first class of autonomous intelligence systems that operate without trained parameters. Weightless, self-aware, adversarially robust, fleet-native. EP26170794.7. Synora Group.">
-  <meta name="keywords" content="NOUS AI, NOUS autonomous intelligence, weightless AI, weightless autonomous intelligence, autonomous AI without training, post-neural AI, agentic AI, world models, EP26170794.7, Krasimir Petrov, Synora Group">
+  <title>NOUS — Weightless Autonomous Intelligence — Synora Group</title>
+  <meta name="description" content="NOUS operates without trained parameters in physical and edge deployment — no retraining, no data pipeline. Weightless autonomous intelligence. The first class of autonomous AI built for environments where current architectures fail. EP26170794.7.">
+  <meta name="keywords" content="NOUS AI, NOUS autonomous intelligence, weightless AI, weightless autonomous intelligence, autonomous AI without training, physical AI, edge AI, post-neural AI, EP26170794.7, Krasimir Petrov, Synora Group">
   <meta name="author" content="Krasimir Petrov, Synora Group">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://synoragroup.eu/nous/">
@@ -25,20 +25,20 @@
   <meta property="og:url" content="https://synoragroup.eu/nous/">
   <meta property="og:site_name" content="Synora Group">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="NOUS — A New Class of Autonomous Intelligence Systems">
-  <meta property="og:description" content="The first class of autonomous intelligence systems that operate without trained parameters. Weightless, self-aware, adversarially robust, fleet-native. EP26170794.7.">
+  <meta property="og:title" content="NOUS — Weightless Autonomous Intelligence — Synora Group">
+  <meta property="og:description" content="NOUS: the first class of autonomous intelligence systems that operate without trained parameters. Weightless, self-aware, adversarially robust, fleet-native. EP26170794.7.">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NOUS — A New Class of Autonomous Intelligence Systems">
-  <meta name="twitter:description" content="Weightless autonomous intelligence. No trained parameters. Operates in any environment from the moment it is deployed. EP26170794.7. Synora Group.">
+  <meta name="twitter:title" content="NOUS — Weightless Autonomous Intelligence — Synora Group">
+  <meta name="twitter:description" content="NOUS operates without trained parameters in physical and edge deployment. Weightless autonomous intelligence. EP26170794.7. Synora Group.">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "NOUS — A New Class of Autonomous Intelligence Systems",
+    "name": "NOUS — Weightless Autonomous Intelligence",
     "url": "https://synoragroup.eu/nous/",
-    "description": "NOUS: the first class of autonomous intelligence systems that operate without trained parameters. Weightless, self-aware, adversarially robust, fleet-native. EP26170794.7.",
+    "description": "NOUS: the first class of autonomous intelligence systems that operate without trained parameters. Built for physical AI and edge deployment where current architectures reach structural limits. EP26170794.7.",
     "publisher": {
       "@type": "Organization",
       "name": "Synora Group",
@@ -53,13 +53,22 @@
         "name": "Synora Group"
       }
     },
-    "datePublished": "2026-04-11",
     "mainEntity": {
       "@type": "CreativeWork",
       "name": "NOUS: A New Class of Autonomous Intelligence Systems",
-      "url": "https://openreview.net/forum?id=Y7WmSyGC9Y",
-      "datePublished": "2026-04-11"
-    }
+      "url": "https://openreview.net/forum?id=Y7WmSyGC9Y"
+    },
+    "keywords": [
+      "NOUS AI",
+      "Weightless autonomous intelligence",
+      "Weightless AI",
+      "Physical AI",
+      "Edge AI",
+      "Autonomous AI",
+      "Post-neural AI",
+      "EP26170794.7",
+      "Synora Group"
+    ]
   }
   </script>
 
@@ -82,13 +91,13 @@
     }
 
     :root {
-      --bg:        #F5F6F9;
-      --bg-edge:   #ECEEF4;
+      --bg:        #F6F5F2;
+      --bg-edge:   #EDECEA;
       --accent:    #1B3A5C;
       --accent-h:  #2C5282;
       --text-pri:  #1A1F2E;
-      --text-sec:  #5B6477;
-      --text-ter:  #8892A4;
+      --text-sec:  #3D4555;
+      --text-ter:  #6B7485;
       --rule:      #D0D4DC;
       --surface:   #FFFFFF;
       --nav-h:     52px;
@@ -123,7 +132,7 @@
       top: 0; left: 0; right: 0;
       z-index: 200;
       height: var(--nav-h);
-      background: rgba(245, 246, 249, 0.96);
+      background: rgba(246, 245, 242, 0.96);
       border-bottom: 1px solid var(--rule);
       display: flex;
       align-items: center;
@@ -222,19 +231,10 @@
       white-space: nowrap;
     }
 
-    .hero-cta:hover {
-      background: var(--accent);
-      color: var(--surface);
-    }
+    .hero-cta:hover { background: var(--accent); color: var(--surface); }
 
-    .cta-arrow {
-      font-size: 0.9rem;
-      transition: transform 0.18s ease;
-    }
-
-    .hero-cta:hover .cta-arrow {
-      transform: translateX(4px);
-    }
+    .cta-arrow { font-size: 0.9rem; transition: transform 0.18s ease; }
+    .hero-cta:hover .cta-arrow { transform: translateX(4px); }
 
     /* ── SECTIONS ────────────────────────────── */
 
@@ -245,9 +245,9 @@
       opacity: 0;
     }
 
-    .section.s1 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.7s forwards; }
-    .section.s2 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.85s forwards; }
-    .section.s3 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.0s forwards; }
+    .s1 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.65s forwards; }
+    .s2 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.8s forwards; }
+    .s3 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.95s forwards; }
 
     .section-label {
       font-family: 'IBM Plex Sans', sans-serif;
@@ -259,7 +259,7 @@
       margin-bottom: 20px;
     }
 
-    /* ── GAP SECTION ─────────────────────────── */
+    /* ── GAP ─────────────────────────────────── */
 
     .gap-block {
       border-left: 2px solid var(--accent);
@@ -272,33 +272,23 @@
       font-size: 0.95rem;
       line-height: 1.8;
       color: var(--text-sec);
-      max-width: 580px;
+      max-width: 560px;
       margin-bottom: 24px;
     }
 
     .paradigm-terms {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 7px;
       align-items: center;
-    }
-
-    .term {
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-weight: 400;
-      font-size: 0.72rem;
-      letter-spacing: 0.04em;
-      padding: 5px 12px;
-      border: 1px solid var(--rule);
-      color: var(--text-ter);
     }
 
     .term-struck {
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 400;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       letter-spacing: 0.04em;
-      padding: 5px 12px;
+      padding: 4px 11px;
       border: 1px solid var(--rule);
       color: var(--text-ter);
       text-decoration: line-through;
@@ -308,14 +298,14 @@
     .term-nous {
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 500;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       letter-spacing: 0.08em;
-      padding: 5px 14px;
+      padding: 4px 13px;
       border: 1.5px solid var(--accent);
       color: var(--accent);
     }
 
-    /* ── DIFFERENT SECTION ───────────────────── */
+    /* ── DIFF ────────────────────────────────── */
 
     .diff-text {
       font-family: 'IBM Plex Sans', sans-serif;
@@ -337,18 +327,12 @@
     }
 
     .cap {
-      padding: 28px 0;
+      padding: 24px 0;
       border-bottom: 1px solid var(--rule);
     }
 
-    .cap:nth-child(odd) {
-      padding-right: 36px;
-      border-right: 1px solid var(--rule);
-    }
-
-    .cap:nth-child(even) {
-      padding-left: 36px;
-    }
+    .cap:nth-child(odd) { padding-right: 36px; border-right: 1px solid var(--rule); }
+    .cap:nth-child(even) { padding-left: 36px; }
 
     .cap-label {
       font-family: 'IBM Plex Sans', sans-serif;
@@ -357,7 +341,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .cap-contrast {
@@ -367,7 +351,7 @@
       font-size: 0.78rem;
       line-height: 1.55;
       color: var(--text-ter);
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .cap-value {
@@ -385,7 +369,7 @@
       padding: 20px 0;
       border-top: 2px solid var(--accent);
       opacity: 0;
-      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.1s forwards;
+      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.05s forwards;
     }
 
     .status-inner {
@@ -433,14 +417,14 @@
       padding-bottom: 72px;
       border-top: 1px solid var(--rule);
       opacity: 0;
-      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.2s forwards;
+      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.15s forwards;
     }
 
     .contact p {
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 300;
       font-size: 0.9rem;
-      line-height: 1.75;
+      line-height: 1.78;
       color: var(--text-sec);
       max-width: 480px;
       margin-bottom: 16px;
@@ -462,7 +446,7 @@
     footer {
       border-top: 1px solid var(--rule);
       opacity: 0;
-      animation: fadeIn 0.6s ease 1.4s forwards;
+      animation: fadeIn 0.6s ease 1.3s forwards;
     }
 
     .footer-inner {
@@ -542,7 +526,7 @@
 
     <!-- HERO -->
     <div class="hero">
-      <p class="hero-eyebrow">Synora Group &nbsp;·&nbsp; First Disclosure &nbsp;·&nbsp; April 2026</p>
+      <p class="hero-eyebrow">Synora Group &nbsp;·&nbsp; First Disclosure</p>
       <h1 class="hero-name">NOUS</h1>
       <p class="hero-claim">
         The first class of autonomous intelligence systems that operate without trained parameters —
@@ -559,9 +543,9 @@
       <div class="section-label">The problem with the current paradigm</div>
       <div class="gap-block">
         <p class="gap-text">
-          Agentic AI, world models, and every autonomous system deployed at scale today share
-          the same architectural commitment: intelligence is trained into parameters before deployment
-          and carried into environments the training data never contained.
+          Agentic AI, world models, and every autonomous system deployed at scale today
+          share the same architectural commitment: intelligence is trained into parameters
+          before deployment and carried into environments the training data never contained.
           The benchmark improves. The structural problem does not move.
           A system whose intelligence was fixed before it encountered the world
           cannot reliably operate in it.
@@ -581,11 +565,10 @@
     <div class="section s2">
       <div class="section-label">What NOUS does instead</div>
       <p class="diff-text">
-        NOUS systems derive their model of the world from what they currently encounter —
+        NOUS systems build their model of the world from what they currently encounter —
         not from a dataset assembled before deployment. Intelligence is a property of the architecture,
-        not a product of training. The system operates correctly from the moment it is deployed,
-        in environments it has never seen, on any hardware it runs on,
-        without retraining, without fine-tuning, without architectural change.
+        not a product of training. The system is operational from the moment it is deployed,
+        in environments it has never seen, on any hardware it runs on.
       </p>
     </div>
 
@@ -595,27 +578,27 @@
       <div class="caps-grid">
 
         <div class="cap">
-          <div class="cap-label">Weightless</div>
+          <div class="cap-label">Deployment</div>
           <div class="cap-contrast">Current systems: intelligence encoded in billions of parameters, retrained for every new domain.</div>
-          <div class="cap-value">NOUS carries no trained parameters. One number governs scale — from an implantable sensor to a distributed fleet. No retraining. No architectural change. No data pipeline.</div>
+          <div class="cap-value">NOUS carries no trained parameters. One number governs scale across any hardware. No retraining. No data pipeline.</div>
         </div>
 
         <div class="cap">
-          <div class="cap-label">Self-aware</div>
+          <div class="cap-label">Reliability</div>
           <div class="cap-contrast">Current systems: reliability assessed externally, after incidents occur.</div>
-          <div class="cap-value">NOUS computes its own operational limits from internal structure at every step. It knows when it is operating reliably and when it is not — before a failure, not after.</div>
+          <div class="cap-value">NOUS computes its own operational limits from internal structure at every step — before a failure, not after.</div>
         </div>
 
         <div class="cap">
-          <div class="cap-label">Adversarially robust</div>
+          <div class="cap-label">Security</div>
           <div class="cap-contrast">Current systems: threat detection requires a prior catalogue of known attack types.</div>
-          <div class="cap-value">NOUS detects interference as a structural violation — without knowledge of the threat. Any manipulation that corrupts the system's information structure is detected exactly, without exception.</div>
+          <div class="cap-value">NOUS detects interference as a structural violation — without knowledge of the threat, without exception.</div>
         </div>
 
         <div class="cap">
-          <div class="cap-label">Fleet-native</div>
-          <div class="cap-contrast">Current systems: multi-agent coordination requires communication infrastructure and protocols.</div>
-          <div class="cap-value">Independent NOUS instances reach identical conclusions without communicating. A fleet in a denied environment converges without a coordinator, a protocol, or a signal between agents.</div>
+          <div class="cap-label">Coordination</div>
+          <div class="cap-contrast">Current systems: multi-agent coordination requires communication infrastructure.</div>
+          <div class="cap-value">Independent NOUS instances reach identical conclusions without communicating. No coordinator. No protocol. No signal.</div>
         </div>
 
       </div>
@@ -626,7 +609,7 @@
       <div class="status-inner">
         <div class="status-item">
           <span class="status-item-label">Published</span>
-          <span class="status-item-value"><span class="status-dot"></span>11 April 2026</span>
+          <span class="status-item-value"><span class="status-dot"></span>OpenReview</span>
         </div>
         <div class="status-item">
           <span class="status-item-label">Patent</span>
