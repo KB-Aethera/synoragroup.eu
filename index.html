@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 
   <!-- Google tag (gtag.js) -->
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCXHEPCTKR"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -18,38 +15,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-
-  <title>Synora Group — Weightless Autonomous Intelligence</title>
-  <meta name="description" content="Synora derives the foundations autonomous intelligence requires. Weightless architecture: no trained parameters, absent by design. Proved autonomous intelligence. Physical theory of intelligence. Independent European deep research.">
-  <meta name="keywords" content="weightless autonomous intelligence, weightless AI, physical theory of intelligence, proved autonomous intelligence, foundational AI theory, substrate-independent intelligence, edge AI architecture, post-neural AI, weightless edge AI, proved world model">
+  <title>Synora Group — Weightless Autonomous Intelligence — NOUS</title>
+  <meta name="description" content="Synora derives the foundations autonomous intelligence requires. NOUS: the first class of weightless autonomous intelligence systems — no trained parameters, absent by design. EP26170794.7. Independent European deep research.">
+  <meta name="keywords" content="NOUS autonomous intelligence, weightless autonomous intelligence, weightless AI, NOUS class, physical theory of intelligence, proved autonomous intelligence, foundational AI theory, substrate-independent intelligence, weightless edge AI, post-neural AI, EP26170794.7">
   <meta name="author" content="Krasimir Petrov, Synora Group">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://synoragroup.eu">
 
   <!-- Open Graph -->
-
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://synoragroup.eu">
   <meta property="og:site_name" content="Synora Group">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Synora Group — Weightless Autonomous Intelligence — Proved">
-  <meta property="og:description" content="An independent European deep research organisation. Weightless autonomous intelligence: no trained parameters, absent by design. The necessary conditions have been derived. Proved. First instantiation complete.">
+  <meta property="og:title" content="Synora Group — Weightless Autonomous Intelligence — NOUS">
+  <meta property="og:description" content="NOUS: the first class of weightless autonomous intelligence systems. No trained parameters — absent by design. EP26170794.7. Independent European deep research.">
 
   <!-- Twitter Card -->
-
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Synora Group — Weightless Autonomous Intelligence — Proved">
-  <meta name="twitter:description" content="Weightless autonomous intelligence. No trained parameters — absent by design. Proved. Independent European deep research. Physical theory of intelligence.">
+  <meta name="twitter:title" content="Synora Group — Weightless Autonomous Intelligence — NOUS">
+  <meta name="twitter:description" content="NOUS: weightless autonomous intelligence. No trained parameters — absent by design. EP26170794.7. Independent European deep research.">
 
   <!-- Structured Data -->
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Synora Group",
     "url": "https://synoragroup.eu",
-    "description": "Independent European deep research organisation deriving the foundational conditions autonomous intelligence requires. Weightless autonomous intelligence: no trained parameters, absent by design. Proved autonomous intelligence.",
+    "description": "Independent European deep research organisation. Creators of NOUS — the first class of weightless autonomous intelligence systems. No trained parameters, absent by design. EP26170794.7.",
     "foundingDate": "2026",
     "founder": {
       "@type": "Person",
@@ -65,6 +58,7 @@
       "https://www.linkedin.com/company/synora-group/"
     ],
     "knowsAbout": [
+      "NOUS autonomous intelligence",
       "Weightless autonomous intelligence",
       "Weightless AI",
       "Physical theory of intelligence",
@@ -78,7 +72,6 @@
   </script>
 
   <!-- Favicons -->
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16.png">
@@ -86,7 +79,6 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   <!-- Fonts -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -123,7 +115,6 @@
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 400;
       color: var(--text-pri);
-      /* Solid gradient fallback for environments stripping SVG data URIs */
       background-color: var(--bg);
       background: linear-gradient(160deg, var(--bg) 0%, var(--bg-edge) 100%);
       background-image:
@@ -134,10 +125,6 @@
       display: flex;
       flex-direction: column;
     }
-
-    /* ── FIXED NAV ───────────────────────────────────────────
-       No backdrop-filter blur — solid semi-transparent bg
-       for performance. Visually identical, zero GPU cost.   */
 
     .nav-fixed {
       position: fixed;
@@ -169,6 +156,7 @@
     .nav-right {
       display: flex;
       align-items: center;
+      gap: 24px;
     }
 
     .nav-location {
@@ -179,7 +167,20 @@
       color: var(--text-ter);
     }
 
-    /* ── PAGE LAYOUT ─────────────────────────── */
+    .nav-nous {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.73rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.15s ease;
+    }
+
+    .nav-nous:hover {
+      color: var(--accent-h);
+    }
 
     .page {
       flex: 1;
@@ -191,8 +192,6 @@
       padding-top: var(--nav-h);
       width: 100%;
     }
-
-    /* ── RULES ──────────────────────────────── */
 
     .rule {
       height: 1px;
@@ -209,8 +208,6 @@
       opacity: 0;
       animation: fadeIn 0.5s ease 0.3s forwards;
     }
-
-    /* ── HERO ───────────────────────────────── */
 
     .hero {
       padding-top: 112px;
@@ -240,8 +237,6 @@
       animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.55s forwards;
     }
 
-    /* ── BODY COPY ──────────────────────────── */
-
     .body-section {
       margin-top: 72px;
       opacity: 0;
@@ -260,8 +255,6 @@
     .body-section p + p {
       margin-top: 24px;
     }
-
-    /* ── PROPERTIES GRID ────────────────────── */
 
     .properties {
       margin-top: 52px;
@@ -305,13 +298,63 @@
       color: var(--text-sec);
     }
 
-    /* ── STATUS BAR ──────────────────────────────────────────
-       Option A: items flush left at natural content width.
-       Baseline alignment ensures dot+value sit on same
-       horizontal line regardless of label length.          */
+    /* ── NOUS DISCLOSURE ────────────────────── */
+
+    .nous-disclosure {
+      margin-top: 52px;
+      padding: 24px 28px;
+      border-left: 2px solid var(--accent);
+      background: rgba(27, 58, 92, 0.03);
+      opacity: 0;
+      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.08s forwards;
+    }
+
+    .nous-label {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.63rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .nous-title {
+      font-family: 'IBM Plex Serif', serif;
+      font-weight: 300;
+      font-size: 1.0rem;
+      color: var(--text-pri);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .nous-meta {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      color: var(--text-ter);
+      margin-bottom: 12px;
+    }
+
+    .nous-link {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s ease;
+    }
+
+    .nous-link:hover {
+      color: var(--accent-h);
+    }
 
     .status {
-      margin-top: 56px;
+      margin-top: 52px;
       padding: 20px 0;
       border-top: 2px solid var(--accent);
       opacity: 0;
@@ -322,6 +365,7 @@
       display: flex;
       align-items: flex-end;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     .status-item {
@@ -360,8 +404,6 @@
       flex-shrink: 0;
     }
 
-    /* ── INSTITUTIONAL STATEMENT ────────────── */
-
     .institution {
       margin-top: 80px;
       padding-top: 36px;
@@ -378,10 +420,6 @@
       color: var(--text-sec);
       max-width: 520px;
     }
-
-    /* ── CTA ─────────────────────────────────────────────────
-       Fixed: display inline-flex, no width:100% at any
-       breakpoint. Button sizes to content always.          */
 
     .cta-section {
       margin-top: 64px;
@@ -430,8 +468,6 @@
       letter-spacing: 0.01em;
     }
 
-    /* ── FOUNDER ────────────────────────────── */
-
     .founder {
       margin-top: 56px;
       padding-bottom: 72px;
@@ -454,8 +490,6 @@
       font-size: 0.8rem;
       color: var(--text-ter);
     }
-
-    /* ── FOOTER ─────────────────────────────── */
 
     footer {
       border-top: 1px solid var(--rule);
@@ -493,17 +527,9 @@
       color: var(--accent);
     }
 
-    /* ── ANIMATIONS ─────────────────────────── */
-
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeIn {
@@ -511,193 +537,131 @@
       to   { opacity: 1; }
     }
 
-    /* ── RESPONSIVE — TABLET 768px ──────────── */
-
     @media (max-width: 768px) {
-
-      .nav-fixed {
-        padding: 0 28px;
-      }
-
-      .page {
-        padding-left: 28px;
-        padding-right: 28px;
-      }
-
-      .footer-inner {
-        padding-left: 28px;
-        padding-right: 28px;
-      }
+      .nav-fixed { padding: 0 28px; }
+      .nav-location { display: none; }
+      .page { padding-left: 28px; padding-right: 28px; }
+      .footer-inner { padding-left: 28px; padding-right: 28px; }
     }
 
-    /* ── RESPONSIVE — MOBILE 600px ──────────── */
-
     @media (max-width: 600px) {
-
-      .hero {
-        padding-top: 80px;
-      }
-
-      .hero-headline {
-        font-size: 1.85rem;
-        line-height: 1.28;
-      }
-
-      /* Properties: single column */
-      .properties {
-        grid-template-columns: 1fr;
-      }
-
-      .property:nth-child(odd) {
-        padding-right: 0;
-        border-right: none;
-      }
-
-      .property:nth-child(even) {
-        padding-left: 0;
-      }
-
-      /* Status: natural gap tightens on small screens */
-      .status-inner {
-        gap: 24px;
-      }
-
-      .status-item-label {
-        font-size: 0.6rem;
-        letter-spacing: 0.08em;
-      }
-
-      .status-item-value {
-        font-size: 0.8rem;
-      }
-
-      /* Footer */
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
+      .hero { padding-top: 80px; }
+      .hero-headline { font-size: 1.85rem; line-height: 1.28; }
+      .properties { grid-template-columns: 1fr; }
+      .property:nth-child(odd) { padding-right: 0; border-right: none; }
+      .property:nth-child(even) { padding-left: 0; }
+      .status-inner { gap: 24px; }
+      .status-item-label { font-size: 0.6rem; letter-spacing: 0.08em; }
+      .status-item-value { font-size: 0.8rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: 6px; padding-top: 20px; padding-bottom: 20px; }
     }
 
   </style>
-
 </head>
 <body>
-
-  <!-- FIXED NAV -->
 
   <nav class="nav-fixed">
     <a class="nav-wordmark" href="/">Synora Group</a>
     <div class="nav-right">
+      <a class="nav-nous" href="/nous.html">NOUS</a>
       <span class="nav-location">Sofia &nbsp;·&nbsp; Europe</span>
     </div>
   </nav>
 
-  <!-- PAGE -->
-
   <div class="page">
 
-```
-<div class="rule rule--accent top-rule"></div>
+    <div class="rule rule--accent top-rule"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <p class="hero-label">Independent Deep Research &amp; Development</p>
-  <h1 class="hero-headline">Synora derives the foundations autonomous intelligence requires.</h1>
-</section>
+    <section class="hero">
+      <p class="hero-label">Independent Deep Research &amp; Development</p>
+      <h1 class="hero-headline">Synora derives the foundations autonomous intelligence requires.</h1>
+    </section>
 
-<!-- BODY COPY -->
-<section class="body-section">
-  <p>
-    Every claim currently made about autonomous intelligent systems rests on assumptions
-    that have not been formally established. The field is building upward.
-    The ground floor does not exist.
-  </p>
-  <p>
-    What follows from this is not a better architecture. It is the necessary conditions
-    themselves — derived, not designed. From them, a new class of weightless AI systems becomes
-    possible: systems that carry no trained parameters, whose intelligence is a provable property
-    — not approximated from data — that scale from a medical sensor to a drone swarm
-    by changing a single parameter, and that are genuinely autonomous because
-    the mathematics requires it.
-  </p>
-</section>
+    <section class="body-section">
+      <p>
+        Every claim currently made about autonomous intelligent systems rests on assumptions
+        that have not been formally established. The field is building upward.
+        The ground floor does not exist.
+      </p>
+      <p>
+        What follows from this is not a better architecture. It is the necessary conditions
+        themselves — derived, not designed. From them emerges NOUS: the first class of
+        weightless AI systems whose intelligence is a structural consequence of geometry,
+        not a product of training — scaling from a medical sensor to a drone swarm
+        by changing a single parameter, genuinely autonomous because the structure
+        of the problem requires it.
+      </p>
+    </section>
 
-<!-- PROPERTIES GRID -->
-<div class="properties">
-  <div class="property">
-    <div class="property-label">Architecture</div>
-    <div class="property-value">Weightless. No trained parameters — absent by design.</div>
-  </div>
-  <div class="property">
-    <div class="property-label">Intelligence</div>
-    <div class="property-value">A provable property. Formally verified, not benchmarked.</div>
-  </div>
-  <div class="property">
-    <div class="property-label">Scale</div>
-    <div class="property-value">Edge hardware to cloud compute. One parameter.</div>
-  </div>
-  <div class="property">
-    <div class="property-label">Agency</div>
-    <div class="property-value">Genuine autonomy derived from first principles. Not approximated.</div>
-  </div>
-</div>
-
-<!-- STATUS BAR -->
-<div class="status">
-  <div class="status-inner">
-    <div class="status-item">
-      <span class="status-item-label">Foundations</span>
-      <span class="status-item-value">
-        <span class="status-dot"></span>Proved
-      </span>
+    <div class="properties">
+      <div class="property">
+        <div class="property-label">Architecture</div>
+        <div class="property-value">Weightless. No trained parameters — absent by design.</div>
+      </div>
+      <div class="property">
+        <div class="property-label">Intelligence</div>
+        <div class="property-value">A structural consequence of geometry. Not trained. Not approximated.</div>
+      </div>
+      <div class="property">
+        <div class="property-label">Scale</div>
+        <div class="property-value">Edge hardware to cloud compute. One parameter.</div>
+      </div>
+      <div class="property">
+        <div class="property-label">Agency</div>
+        <div class="property-value">Genuine autonomy derived from first principles. Not approximated.</div>
+      </div>
     </div>
-    <div class="status-item">
-      <span class="status-item-label">First Instantiation</span>
-      <span class="status-item-value">
-        <span class="status-dot"></span>Complete
-      </span>
+
+    <!-- NOUS DISCLOSURE -->
+    <div class="nous-disclosure">
+      <div class="nous-label">First Publication &nbsp;·&nbsp; April 2026</div>
+      <div class="nous-title">NOUS: A New Class of Autonomous Intelligence Systems</div>
+      <div class="nous-meta">Krasimir Petrov &nbsp;·&nbsp; Synora Group &nbsp;·&nbsp; EP26170794.7 &nbsp;·&nbsp; OpenReview Archive &nbsp;·&nbsp; CC BY 4.0</div>
+      <a class="nous-link" href="https://openreview.net/forum?id=Y7WmSyGC9Y" target="_blank" rel="noopener">
+        Read the paper &nbsp;&#8594;
+      </a>
     </div>
-    <div class="status-item">
-      <span class="status-item-label">Patent</span>
-      <span class="status-item-value">
-        <span class="status-dot"></span>Filing
-      </span>
+
+    <div class="status">
+      <div class="status-inner">
+        <div class="status-item">
+          <span class="status-item-label">Foundations</span>
+          <span class="status-item-value"><span class="status-dot"></span>Proved</span>
+        </div>
+        <div class="status-item">
+          <span class="status-item-label">NOUS Class</span>
+          <span class="status-item-value"><span class="status-dot"></span>Published</span>
+        </div>
+        <div class="status-item">
+          <span class="status-item-label">Patent</span>
+          <span class="status-item-value"><span class="status-dot"></span>EP26170794.7</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- INSTITUTIONAL STATEMENT -->
-<div class="institution">
-  <p>
-    Synora is an independent European deep research organisation.
-    We do not iterate on what exists. We derive what must exist before
-    what comes next can be trusted.
-  </p>
-</div>
+    <div class="institution">
+      <p>
+        Synora is an independent European deep research organisation.
+        We do not iterate on what exists. We derive what must exist before
+        what comes next can be trusted.
+      </p>
+    </div>
 
-<!-- CTA -->
-<div class="cta-section">
-  <a href="mailto:contact@synoragroup.eu" class="cta">
-    Request the Research Brief
-    <span class="cta-arrow">&#8594;</span>
-  </a>
-  <p class="cta-qualifier">For organisations whose mandates intersect with provable autonomy.</p>
-</div>
+    <div class="cta-section">
+      <a href="mailto:contact@synoragroup.eu" class="cta">
+        Request the Research Brief
+        <span class="cta-arrow">&#8594;</span>
+      </a>
+      <p class="cta-qualifier">For organisations whose mandates intersect with provable autonomy.</p>
+    </div>
 
-<!-- FOUNDER -->
-<div class="founder">
-  <div class="rule" style="margin-bottom: 24px;"></div>
-  <p class="founder-name">Krasimir Petrov &nbsp;·&nbsp; Founder</p>
-  <p class="founder-title">Architect of a gauge field theory of intelligence</p>
-</div>
-```
+    <div class="founder">
+      <div class="rule" style="margin-bottom: 24px;"></div>
+      <p class="founder-name">Krasimir Petrov &nbsp;·&nbsp; Founder</p>
+      <p class="founder-title">Architect of a gauge field theory of intelligence</p>
+    </div>
 
   </div>
-
-  <!-- FOOTER -->
 
   <footer>
     <div class="footer-inner">
